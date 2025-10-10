@@ -44,61 +44,60 @@ const About = () => {
 
   return (
     <motion.div 
-      className="border-b border-neutral-900 pb-4"
+      className="py-24 border-b border-neutral-800/50"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      <motion.h2 
-        className="my-20 text-center text-5xl font-normal tracking-tight"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        style={{ willChange: 'transform, opacity' }}
-      >
-        About <span className="text-neutral-500">Me</span>
-      </motion.h2>
-
-      <div className="flex flex-wrap">
-        <motion.div 
-          className="w-full lg:w-1/2 lg:p-8"
-          variants={itemVariants}
+      <div className="container mx-auto px-6">
+        {/* Section Title */}
+        <motion.h2 
+          className="mb-16 text-center text-3xl md:text-4xl font-light tracking-tight text-neutral-100"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="flex items-center justify-center">
+          About
+        </motion.h2>
+
+        {/* Content Grid */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image */}
+          <motion.div 
+            className="flex justify-center lg:justify-end"
+            variants={itemVariants}
+          >
             <motion.img 
-              className="rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="rounded-lg w-full max-w-sm object-cover border border-neutral-800"
               src={profilePic} 
-              alt="Aswin"
+              alt="Aswin Chandran"
               variants={imageVariants}
               whileHover={{ 
                 scale: 1.02,
-                transition: { duration: 0.2 }
+                transition: { duration: 0.3 }
               }}
-              whileTap={{ scale: 0.98 }}
-              style={{ willChange: 'transform', width: '350px', height: '400px' }}
+              style={{ aspectRatio: '1/1' }}
             />
-          </div>
-        </motion.div>
-        
-        <motion.div 
-          className="w-full lg:w-1/2 lg:p-8"
-          variants={itemVariants}
-        >
-          <div className="flex justify-center lg:justify-start">
+          </motion.div>
+          
+          {/* Text */}
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-col justify-center"
+          >
             <motion.p 
-              className="my-2 max-w-xl py-6 leading-relaxed text-lg text-neutral-300"
+              className="text-base leading-loose text-neutral-400 font-light"
               initial={{ opacity: 0, x: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.4 }}
-              style={{ willChange: 'transform, opacity' }}
+              transition={{ delay: 0.2, duration: 0.5 }}
             >
               {ABOUT_TEXT}
             </motion.p>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </motion.div>
   );

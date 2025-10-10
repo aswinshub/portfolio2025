@@ -49,62 +49,57 @@ const Tech = () => {
 
   return (
     <motion.div 
-      className="border-t border-neutral-800 pb-24"
+      className="py-24 border-b border-neutral-800/50"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      <motion.h1 
-        className="my-20 text-center text-5xl font-normal tracking-tight"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        style={{ willChange: 'transform, opacity' }}
-      >
-        Technologies
-      </motion.h1>
-      
-      <motion.div 
-        className="flex flex-wrap justify-center items-center gap-6"
-        variants={containerVariants}
-      >
-        {techItems.map((tech, index) => (
-          <motion.div
-            key={index}
-            className="group relative"
-            variants={itemVariants}
-            whileHover={{ 
-              scale: 1.05,
-              y: -5,
-              transition: { duration: 0.2 }
-            }}
-            whileTap={{ scale: 0.98 }}
-            style={{ willChange: 'transform' }}
-          >
-            <motion.div 
-              className="rounded-2xl border-4 border-neutral-800 p-6 bg-neutral-900/50 backdrop-blur-sm hover:border-neutral-600 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-2xl"
-              whileHover={{ 
-                backgroundColor: "rgba(38, 38, 38, 0.8)",
-                borderColor: "#525252"
-              }}
-              style={{ willChange: 'background-color, border-color' }}
-            >
-              <tech.icon className={`text-7xl ${tech.color} group-hover:scale-110 transition-transform duration-300`} />
-            </motion.div>
-            
-            {/* Tooltip */}
+      <div className="container mx-auto px-6">
+        {/* Section Title */}
+        <motion.h2 
+          className="mb-16 text-center text-3xl md:text-4xl font-light tracking-tight text-neutral-100"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Technologies
+        </motion.h2>
+        
+        {/* Tech Grid */}
+        <motion.div 
+          className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8"
+          variants={containerVariants}
+        >
+          {techItems.map((tech, index) => (
             <motion.div
-              className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-neutral-800 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-              initial={{ y: 10 }}
-              whileHover={{ y: 0 }}
+              key={index}
+              className="group relative flex flex-col items-center"
+              variants={itemVariants}
+              whileHover={{ 
+                y: -8,
+                transition: { duration: 0.2 }
+              }}
             >
-              {tech.name}
+              <motion.div 
+                className="w-full aspect-square flex items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/30 hover:bg-neutral-800/50 hover:border-neutral-700 transition-all duration-300"
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.2 }
+                }}
+              >
+                <tech.icon className={`text-5xl ${tech.color}`} />
+              </motion.div>
+              
+              {/* Label */}
+              <p className="mt-3 text-sm text-neutral-500 font-light group-hover:text-neutral-400 transition-colors">
+                {tech.name}
+              </p>
             </motion.div>
-          </motion.div>
-        ))}
-      </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

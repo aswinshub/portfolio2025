@@ -6,7 +6,7 @@ import Tech from "./components/Tech";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import SplashCursor from "../src/blocks/TailwindAnimations/SplashCursor/SplashCursor";
-import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { motion } from "motion/react";
 
 const App = () => {
@@ -42,7 +42,7 @@ const App = () => {
         <Tech/>
         <Experience />
         <Projects/>
-        <Contact />
+        <Footer />
       </motion.div>
     </motion.div>
   );

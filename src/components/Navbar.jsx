@@ -21,56 +21,61 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      className="mb-20 flex items-center justify-between py-6"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       style={{ willChange: 'transform, opacity' }}
     >
-      <motion.div 
-        className="flex flex-shrink-0 items-center"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        style={{ willChange: 'transform' }}
-      >
-        <motion.img 
-          className="mx-2 w-10 cursor-pointer"
-          src={logo} 
-          alt="logo"
-          whileHover={{ rotate: 3 }}
-          transition={{ duration: 0.2 }}
-          style={{ willChange: 'transform' }}
-        />
-      </motion.div>
-
-      <motion.div 
-        className="m-8 flex items-center justify-center gap-4 text-2xl"
-        initial="hidden"
-        animate="visible"
-      >
-        {[
-          { icon: FaLinkedin, color: "#0077b5", delay: 0 },
-          { icon: FaGithub, color: "#333", delay: 1 },
-          { icon: FaInstagram, color: "#e4405f", delay: 2 }
-        ].map(({ icon: Icon, color, delay }, index) => (
-          <motion.div
-            key={index}
-            custom={delay}
-            variants={iconVariants}
-            whileHover={{ 
-              scale: 1.1,
-              y: -2,
-              color: color,
-              transition: { duration: 0.15 }
-            }}
-            whileTap={{ scale: 0.95 }}
-            style={{ willChange: 'transform, color' }}
-            className="cursor-pointer transition-colors duration-300"
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between py-4">
+          <motion.div 
+            className="flex items-center"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <Icon />
+            <motion.img 
+              className="w-8 h-8 cursor-pointer"
+              src={logo} 
+              alt="Aswin Chandran"
+              whileHover={{ rotate: 3 }}
+              transition={{ duration: 0.2 }}
+            />
           </motion.div>
-        ))}
-      </motion.div>
+
+          <motion.div 
+            className="flex items-center gap-6 text-xl"
+            initial="hidden"
+            animate="visible"
+          >
+            {[
+              { icon: FaLinkedin, color: "#0077b5", delay: 0, label: "LinkedIn", href: "https://www.linkedin.com/in/aswin-chandran-8b852a1a9/" },
+              { icon: FaGithub, color: "#e6edf3", delay: 1, label: "GitHub", href: "https://github.com/aswinshub" },
+              { icon: FaInstagram, color: "#e4405f", delay: 2, label: "Instagram", href: "https://www.instagram.com/aswinnchandran/" }
+            ].map(({ icon: Icon, color, delay, label, href }, index) => (
+              <motion.a
+                key={index}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                custom={delay}
+                variants={iconVariants}
+                whileHover={{ 
+                  scale: 1.1,
+                  y: -2,
+                  color: color,
+                  transition: { duration: 0.2 }
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="text-neutral-400 hover:text-neutral-100 transition-colors cursor-pointer"
+              >
+                <Icon />
+              </motion.a>
+            ))}
+          </motion.div>
+        </div>
+      </div>
     </motion.nav>
   );
 };

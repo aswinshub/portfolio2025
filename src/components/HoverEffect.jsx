@@ -161,16 +161,14 @@ export const Card = ({
   return (
     <motion.div
       className={cn(
-        "rounded-2xl h-full w-full p-4 md:p-6 lg:p-8 overflow-hidden bg-black/90 backdrop-blur-sm border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 min-h-[180px] md:min-h-[200px]",
+        "rounded-lg h-full w-full p-6 overflow-hidden bg-neutral-900/30 border border-neutral-800 group-hover:border-neutral-700 group-hover:bg-neutral-800/50 relative z-20 min-h-[200px] transition-colors",
         className
       )}
       whileHover={{ 
-        backgroundColor: "rgba(0, 0, 0, 0.95)",
-        borderColor: "#525252",
-        boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
+        y: -4,
         transition: { 
-          duration: 0.4,
-          ease: "easeOut",
+          duration: 0.3,
+          ease: [0.22, 1, 0.36, 1],
         }
       }}
     >
@@ -186,11 +184,11 @@ export const CardTitle = ({
   children
 }) => {
   return (
-    <h4 
-      className={cn("text-zinc-100 font-bold tracking-wide text-lg md:text-xl mb-2 md:mb-3", className)}
+    <h3 
+      className={cn("text-neutral-100 font-normal text-lg mb-2", className)}
     >
       {children}
-    </h4>
+    </h3>
   );
 };
 
@@ -200,7 +198,7 @@ export const CardDescription = ({
 }) => {
   return (
     <p
-      className={cn("text-zinc-400 tracking-wide leading-relaxed text-sm md:text-base", className)}
+      className={cn("text-neutral-400 font-light leading-relaxed text-sm", className)}
     >
       {children}
     </p>
