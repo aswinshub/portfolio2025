@@ -36,7 +36,7 @@ export const HoverEffect = ({
 
   return (
     <motion.div
-      className={cn("grid grid-cols-1 md:grid-cols-2 py-6 md:py-10 gap-4 md:gap-6", className)}
+      className={cn("grid grid-cols-1 py-6 md:py-10 gap-4 md:gap-6", className)}
       initial="hidden"
       whileInView="visible"
       exit="exit"
@@ -44,9 +44,8 @@ export const HoverEffect = ({
       variants={pageVariants}
     >
       {items.map((item, idx) => (
-        <motion.a
-          href={item?.link}
-          key={item?.link}
+        <motion.div
+          key={item?.title ?? idx}
           className="relative group block p-2 md:p-3 h-full w-full"
           whileHover={{ 
             y: -4,
@@ -68,13 +67,13 @@ export const HoverEffect = ({
         >
           
           <Card>
-            <div className="flex flex-col sm:flex-row items-start h-full gap-4 md:gap-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center h-full gap-4 md:gap-6">
               {item.image && (
-                <div className="flex-shrink-0 w-full sm:w-auto flex justify-center sm:justify-start">
+                <div className="flex-shrink-0 w-full sm:w-64 md:w-80">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-48 w-full sm:h-32 sm:w-32 rounded-xl object-cover shadow-lg"
+                    className="w-full aspect-[700/390] rounded-xl object-cover shadow-lg border border-neutral-800/50"
                   />
                 </div>
               )}
@@ -96,9 +95,27 @@ export const HoverEffect = ({
                   </div>
                 )}
               </div>
+
+              {(item.liveLinks?.length > 0 || item.liveUrl) && (
+                <div className="flex-shrink-0 w-full sm:w-auto flex flex-col items-end sm:items-center gap-2">
+                  {(item.liveLinks ?? (item.liveUrl ? [{ label: "View Live", url: item.liveUrl }] : [])).map(
+                    ({ label, url }) => (
+                      <a
+                        key={url}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block rounded-full border border-indigo-500/40 bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-300 transition-all duration-300 hover:border-indigo-400 hover:bg-indigo-500/20 hover:text-indigo-200 hover:shadow-[0_0_20px_rgba(129,140,248,0.15)] whitespace-nowrap text-center"
+                      >
+                        {label}
+                      </a>
+                    )
+                  )}
+                </div>
+              )}
             </div>
           </Card>
-        </motion.a>
+        </motion.div>
       ))}
     </motion.div>
   );

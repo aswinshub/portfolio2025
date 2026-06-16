@@ -56,7 +56,7 @@ const Footer = () => {
           variants={containerVariants}
         >
           {/* Get in Touch Section */}
-          <div className="w-full max-w-4xl">
+          <div className="w-full max-w-6xl">
             <motion.h2 
               className="mb-12 text-center text-3xl md:text-4xl font-light tracking-tight text-neutral-100"
               initial={{ opacity: 0, y: -20 }}

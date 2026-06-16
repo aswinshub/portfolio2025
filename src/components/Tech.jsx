@@ -69,7 +69,7 @@ const Tech = () => {
         
         {/* Tech Grid */}
         <motion.div 
-          className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8"
           variants={containerVariants}
         >
           {techItems.map((tech, index) => (

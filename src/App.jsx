@@ -38,10 +38,12 @@ const App = () => {
       >
         <Navbar />
         <Hero />
-        <About />
-        <Tech/>
+        {/* <About /> */}
         <Experience />
         <Projects/>
+        <Tech/>
+       
+       
         <Footer />
       </motion.div>
     </motion.div>

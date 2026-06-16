@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="min-h-screen flex items-center justify-center border-b border-neutral-800/50 py-16">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center space-y-8">
             {/* Main Heading */}
             <motion.h1
@@ -48,7 +48,7 @@ const Hero = () => {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="max-w-2xl text-base leading-relaxed text-neutral-400 font-light"
+              className="max-w-3xl text-base leading-relaxed text-neutral-400 font-light"
               style={{ willChange: 'transform, opacity' }}
             >
               {HERO_CONTENT}

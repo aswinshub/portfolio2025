@@ -63,7 +63,7 @@ const Experience = () => {
         </motion.h2>
         
         {/* Experience Timeline */}
-        <motion.div className="max-w-4xl mx-auto space-y-12" variants={containerVariants}>
+        <motion.div className="max-w-6xl mx-auto space-y-12" variants={containerVariants}>
           {EXPERIENCES.map((experience, index) => (
             <motion.div
               key={index}

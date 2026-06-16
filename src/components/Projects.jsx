@@ -5,12 +5,12 @@ import { HoverEffect, Card, CardTitle, CardDescription } from "./HoverEffect";
 
 const Projects = () => {
   // Transform PROJECTS data to match HoverEffect format
-  const projectItems = PROJECTS.map((project, index) => ({
+  const projectItems = PROJECTS.map((project) => ({
     title: project.title,
     description: project.description,
-    link: "#", // You can add actual project links here
+    liveLinks: project.liveLinks,
     technologies: project.technologies,
-    image: project.image
+    image: project.image,
   }));
 
   return (
