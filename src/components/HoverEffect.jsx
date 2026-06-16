@@ -36,7 +36,7 @@ export const HoverEffect = ({
 
   return (
     <motion.div
-      className={cn("grid grid-cols-1 md:grid-cols-2 py-6 md:py-10 gap-4 md:gap-6", className)}
+      className={cn("grid grid-cols-1 py-6 md:py-10 gap-4 md:gap-6", className)}
       initial="hidden"
       whileInView="visible"
       exit="exit"
@@ -44,9 +44,8 @@ export const HoverEffect = ({
       variants={pageVariants}
     >
       {items.map((item, idx) => (
-        <motion.a
-          href={item?.link}
-          key={item?.link}
+        <motion.div
+          key={item?.title ?? idx}
           className="relative group block p-2 md:p-3 h-full w-full"
           whileHover={{ 
             y: -4,
@@ -68,7 +67,7 @@ export const HoverEffect = ({
         >
           
           <Card>
-            <div className="flex flex-col sm:flex-row items-start h-full gap-4 md:gap-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center h-full gap-4 md:gap-6">
               {item.image && (
                 <div className="flex-shrink-0 w-full sm:w-auto flex justify-center sm:justify-start">
                   <img
@@ -96,9 +95,27 @@ export const HoverEffect = ({
                   </div>
                 )}
               </div>
+
+              {(item.liveLinks?.length > 0 || item.liveUrl) && (
+                <div className="flex-shrink-0 w-full sm:w-auto flex flex-col items-end sm:items-center gap-2">
+                  {(item.liveLinks ?? (item.liveUrl ? [{ label: "View Live", url: item.liveUrl }] : [])).map(
+                    ({ label, url }) => (
+                      <a
+                        key={url}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block rounded-full border border-neutral-700 bg-neutral-900/50 px-4 py-2 text-sm font-light text-neutral-200 transition-colors hover:border-neutral-500 hover:bg-neutral-800 hover:text-neutral-100 whitespace-nowrap text-center"
+                      >
+                        {label}
+                      </a>
+                    )
+                  )}
+                </div>
+              )}
             </div>
           </Card>
-        </motion.a>
+        </motion.div>
       ))}
     </motion.div>
   );

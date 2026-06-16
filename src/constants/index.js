@@ -40,32 +40,76 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Bi Survey Suite Studio",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Designed and developed the UI/UX and frontend for Bi Survey Suite Studio, a business-focused survey and analytics platform that helps organizations collect feedback, analyze data, and gain actionable insights through interactive dashboards and real-time reporting. Built using React, Vite, TypeScript, Tailwind CSS, shadcn/ui, PrimeReact, React Query, and Axios to deliver a scalable, responsive, and user-friendly experience.",
+    technologies: ["React", "Vite", "TypeScript", "Tailwind CSS", "shadcn/ui", "PrimeReact", "React Query", "Axios"],
+    liveLinks: [
+      { label: "View Live", url: "https://bi-survey-studio-dev.bizintellis.com/auth/login" },
+    ],
   },
   {
-    title: "Task Management App",
+    title: "Kinder Scapes – Daycare Management Platform",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "Designed and developed the Kinder Scapes Daycare Management Software Landing Page using React.js, creating a modern, responsive, and conversion-focused user experience. Additionally, led the product revamp in Vue.js, improving usability, visual consistency, and overall user experience across the daycare management platform for administrators, teachers, and parents.",
+    technologies: ["React.js", "Vue.js", "Responsive Design", "UI/UX"],
+    liveLinks: [
+      { label: "View Live", url: "https://demoweb.kinderscapes.com/" },
+    ],
   },
   {
-    title: "Portfolio Website",
+    title: "insy8.ai – AI Analytics Platform Website",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "Designed and developed the insy8.ai marketing website, a high-performance, SEO-friendly platform built with Astro 6, Tailwind CSS v4, and TypeScript. The website features a scalable content architecture, dark/light theme support, interactive animations, and conversion-focused user journeys to showcase AI-powered business analytics solutions.",
+    technologies: ["Astro 6", "Tailwind CSS v4", "TypeScript", "SEO"],
+    liveLinks: [
+      { label: "View Live", url: "https://insy8.ai/" },
+      { label: "Landing Page", url: "https://www.bizintellis.com/insy8-ai/" },
+      { label: "Hospitality Services", url: "https://www.bizintellis.com/hospitality-services/" },
+    ],
   },
   {
-    title: "Blogging Platform",
+    title: "Tea Time Premium Smart Menu - POC",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "Designed and developed Tea Time Premium Smart Menu, a modern QR-based digital dining platform built with Astro 5, React 19, TypeScript, and Tailwind CSS v4. The solution features AI-assisted menu discovery, multilingual support, smart search, cart management, and a Front Desk dashboard, delivering a fast, interactive, and mobile-first customer experience.",
+    technologies: ["Astro 5", "React 19", "TypeScript", "Tailwind CSS v4"],
+    liveLinks: [
+      { label: "View Live", url: "https://teatimepremium-demo.bizintellis.ae/" },
+    ],
+  },
+  {
+    title: "Smart Menu Front Desk Dashboard",
+    image: project1,
+    description:
+      "Designed and developed the Smart Menu Front Desk Dashboard, a restaurant operations management interface built with Astro 5 and Tailwind CSS v4. The dashboard enables staff to monitor live orders, track KPIs, manage waiter requests, and oversee restaurant operations through a modern, responsive, and user-friendly experience.",
+    technologies: ["Astro 5", "Tailwind CSS v4", "Dashboard UI"],
+    liveLinks: [
+      { label: "View Live", url: "https://teatimepremium-front-desk.vercel.app/" },
+    ],
+  },
+  {
+    title: "People Metrics – Workforce Analytics Platform",
+    image: project2,
+    description:
+      "Led the UI/UX redesign and product revamp of People Metrics, a workforce analytics platform that helps organizations track employee performance, engagement, and business KPIs. Redesigned dashboards, reporting interfaces, and analytics workflows to deliver a modern, data-driven, and user-friendly experience.",
+    technologies: ["UI/UX Design", "Dashboard Design", "Analytics", "Figma"],
+    liveLinks: [
+      { label: "View Live", url: "https://cem.peoplemetrics.com/login" },
+    ],
+  },
+  {
+    title: "IF3 – Ingredient Factory Intelligence Platform",
+    image: project3,
+    description:
+      "Led the UI/UX redesign and modernization of IF3, an ingredient factory business intelligence platform. Revamped analytics dashboards, reporting modules, and operational workflows to improve usability, data visibility, and overall user experience, helping stakeholders make faster and more informed business decisions.",
+    technologies: ["UI/UX Design", "Business Intelligence", "Dashboard Design", "Analytics"],
+    liveLinks: [
+      { label: "View Live", url: "https://if-revamp-01.bizintellis.com/login" },
+    ],
   },
 ];
 
