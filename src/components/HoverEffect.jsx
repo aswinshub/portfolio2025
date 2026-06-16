@@ -99,17 +99,26 @@ export const HoverEffect = ({
               {(item.liveLinks?.length > 0 || item.liveUrl) && (
                 <div className="flex-shrink-0 w-full sm:w-auto flex flex-col items-end sm:items-center gap-2">
                   {(item.liveLinks ?? (item.liveUrl ? [{ label: "View Live", url: item.liveUrl }] : [])).map(
-                    ({ label, url }) => (
+                    ({ label, url }) => {
+                      const isPrimary = label === "View Live";
+
+                      return (
                       <a
                         key={url}
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block rounded-full border border-indigo-500/40 bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-300 transition-all duration-300 hover:border-indigo-400 hover:bg-indigo-500/20 hover:text-indigo-200 hover:shadow-[0_0_20px_rgba(129,140,248,0.15)] whitespace-nowrap text-center"
+                        className={cn(
+                          "inline-block rounded-full border transition-all duration-300 whitespace-nowrap text-center",
+                          isPrimary
+                            ? "border-indigo-500/40 bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-300 hover:border-indigo-400 hover:bg-indigo-500/20 hover:text-indigo-200 hover:shadow-[0_0_20px_rgba(129,140,248,0.15)]"
+                            : "border-neutral-600/40 bg-neutral-800/30 px-3 py-1.5 text-xs font-light text-neutral-400 hover:border-neutral-500 hover:bg-neutral-800/60 hover:text-neutral-300"
+                        )}
                       >
                         {label}
                       </a>
-                    )
+                      );
+                    }
                   )}
                 </div>
               )}
