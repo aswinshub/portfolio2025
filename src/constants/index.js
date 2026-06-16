@@ -1,7 +1,10 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import biSurveyTool from "../assets/projects/bi survey tool.png";
+import kinderscapes from "../assets/projects/Kinderscapes.png";
+import insy8 from "../assets/projects/Insy8.png";
+import smartMenuPoc from "../assets/projects/smart menu POC.png";
+import smartMenuLanding from "../assets/projects/smart menu landing.png";
+import peopleMetrics from "../assets/projects/People metrics.png";
+import if3 from "../assets/projects/if3.png";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -41,7 +44,7 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "Bi Survey Suite Studio",
-    image: project1,
+    image: biSurveyTool,
     description:
       "Designed and developed the UI/UX and frontend for Bi Survey Suite Studio, a business-focused survey and analytics platform that helps organizations collect feedback, analyze data, and gain actionable insights through interactive dashboards and real-time reporting. Built using React, Vite, TypeScript, Tailwind CSS, shadcn/ui, PrimeReact, React Query, and Axios to deliver a scalable, responsive, and user-friendly experience.",
     technologies: ["React", "Vite", "TypeScript", "Tailwind CSS", "shadcn/ui", "PrimeReact", "React Query", "Axios"],
@@ -51,7 +54,7 @@ export const PROJECTS = [
   },
   {
     title: "Kinder Scapes – Daycare Management Platform",
-    image: project2,
+    image: kinderscapes,
     description:
       "Designed and developed the Kinder Scapes Daycare Management Software Landing Page using React.js, creating a modern, responsive, and conversion-focused user experience. Additionally, led the product revamp in Vue.js, improving usability, visual consistency, and overall user experience across the daycare management platform for administrators, teachers, and parents.",
     technologies: ["React.js", "Vue.js", "Responsive Design", "UI/UX"],
@@ -61,7 +64,7 @@ export const PROJECTS = [
   },
   {
     title: "insy8.ai – AI Analytics Platform Website",
-    image: project3,
+    image: insy8,
     description:
       "Designed and developed the insy8.ai marketing website, a high-performance, SEO-friendly platform built with Astro 6, Tailwind CSS v4, and TypeScript. The website features a scalable content architecture, dark/light theme support, interactive animations, and conversion-focused user journeys to showcase AI-powered business analytics solutions.",
     technologies: ["Astro 6", "Tailwind CSS v4", "TypeScript", "SEO"],
@@ -73,27 +76,29 @@ export const PROJECTS = [
   },
   {
     title: "Tea Time Premium Smart Menu - POC",
-    image: project4,
+    image: smartMenuPoc,
     description:
       "Designed and developed Tea Time Premium Smart Menu, a modern QR-based digital dining platform built with Astro 5, React 19, TypeScript, and Tailwind CSS v4. The solution features AI-assisted menu discovery, multilingual support, smart search, cart management, and a Front Desk dashboard, delivering a fast, interactive, and mobile-first customer experience.",
     technologies: ["Astro 5", "React 19", "TypeScript", "Tailwind CSS v4"],
     liveLinks: [
       { label: "View Live", url: "https://teatimepremium-demo.bizintellis.ae/" },
+      { label: "Front Desk", url: "https://teatimepremium-front-desk.vercel.app/" },
     ],
   },
+  
   {
-    title: "Smart Menu Front Desk Dashboard",
-    image: project1,
+    title: "insy8 Smart Menu – Product Landing Page",
+    image: smartMenuLanding,
     description:
-      "Designed and developed the Smart Menu Front Desk Dashboard, a restaurant operations management interface built with Astro 5 and Tailwind CSS v4. The dashboard enables staff to monitor live orders, track KPIs, manage waiter requests, and oversee restaurant operations through a modern, responsive, and user-friendly experience.",
-    technologies: ["Astro 5", "Tailwind CSS v4", "Dashboard UI"],
+      "Designed and developed the insy8 Smart Menu product landing page, a conversion-focused marketing site showcasing AI-powered hospitality and digital dining solutions. Built with React and Tailwind CSS to deliver a responsive, visually polished experience with clear product storytelling, feature highlights, and engaging UI interactions.",
+    technologies: ["React", "Tailwind CSS", "TypeScript", "Responsive Design", "UI/UX"],
     liveLinks: [
-      { label: "View Live", url: "https://teatimepremium-front-desk.vercel.app/" },
+      { label: "View Live", url: "https://www.bizintellis.com/products/insy8-smartmenu/" },
     ],
   },
   {
     title: "People Metrics – Workforce Analytics Platform",
-    image: project2,
+    image: peopleMetrics,
     description:
       "Led the UI/UX redesign and product revamp of People Metrics, a workforce analytics platform that helps organizations track employee performance, engagement, and business KPIs. Redesigned dashboards, reporting interfaces, and analytics workflows to deliver a modern, data-driven, and user-friendly experience.",
     technologies: ["UI/UX Design", "Dashboard Design", "Analytics", "Figma"],
@@ -103,7 +108,7 @@ export const PROJECTS = [
   },
   {
     title: "IF3 – Ingredient Factory Intelligence Platform",
-    image: project3,
+    image: if3,
     description:
       "Led the UI/UX redesign and modernization of IF3, an ingredient factory business intelligence platform. Revamped analytics dashboards, reporting modules, and operational workflows to improve usability, data visibility, and overall user experience, helping stakeholders make faster and more informed business decisions.",
     technologies: ["UI/UX Design", "Business Intelligence", "Dashboard Design", "Analytics"],

@@ -69,11 +69,11 @@ export const HoverEffect = ({
           <Card>
             <div className="flex flex-col sm:flex-row items-start sm:items-center h-full gap-4 md:gap-6">
               {item.image && (
-                <div className="flex-shrink-0 w-full sm:w-auto flex justify-center sm:justify-start">
+                <div className="flex-shrink-0 w-full sm:w-56 md:w-64">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-48 w-full sm:h-32 sm:w-32 rounded-xl object-cover shadow-lg"
+                    className="w-full aspect-[700/390] rounded-xl object-cover shadow-lg border border-neutral-800/50"
                   />
                 </div>
               )}
@@ -105,7 +105,7 @@ export const HoverEffect = ({
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block rounded-full border border-neutral-700 bg-neutral-900/50 px-4 py-2 text-sm font-light text-neutral-200 transition-colors hover:border-neutral-500 hover:bg-neutral-800 hover:text-neutral-100 whitespace-nowrap text-center"
+                        className="inline-block rounded-full border border-indigo-500/40 bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-300 transition-all duration-300 hover:border-indigo-400 hover:bg-indigo-500/20 hover:text-indigo-200 hover:shadow-[0_0_20px_rgba(129,140,248,0.15)] whitespace-nowrap text-center"
                       >
                         {label}
                       </a>
