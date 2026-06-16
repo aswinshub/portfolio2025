@@ -43,6 +43,16 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "insy8.ai Smart Menu – Product Landing Page",
+    image: smartMenuLanding,
+    description:
+      "Designed and developed the insy8 Smart Menu product landing page, a conversion-focused marketing site showcasing AI-powered hospitality and digital dining solutions. Built with React and Tailwind CSS to deliver a responsive, visually polished experience with clear product storytelling, feature highlights, and engaging UI interactions.",
+    technologies: ["React", "Tailwind CSS", "TypeScript", "Responsive Design", "UI/UX"],
+    liveLinks: [
+      { label: "View Live", url: "https://www.bizintellis.com/products/insy8-smartmenu/" },
+    ],
+  },
+  {
     title: "Bi Survey Suite Studio",
     image: biSurveyTool,
     description:
@@ -86,16 +96,7 @@ export const PROJECTS = [
     ],
   },
   
-  {
-    title: "insy8 Smart Menu – Product Landing Page",
-    image: smartMenuLanding,
-    description:
-      "Designed and developed the insy8 Smart Menu product landing page, a conversion-focused marketing site showcasing AI-powered hospitality and digital dining solutions. Built with React and Tailwind CSS to deliver a responsive, visually polished experience with clear product storytelling, feature highlights, and engaging UI interactions.",
-    technologies: ["React", "Tailwind CSS", "TypeScript", "Responsive Design", "UI/UX"],
-    liveLinks: [
-      { label: "View Live", url: "https://www.bizintellis.com/products/insy8-smartmenu/" },
-    ],
-  },
+
   {
     title: "People Metrics – Workforce Analytics Platform",
     image: peopleMetrics,
