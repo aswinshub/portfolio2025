@@ -33,7 +33,7 @@ const Projects = () => {
           Projects
         </motion.h2>
         
-        <HoverEffect items={projectItems} className="max-w-4xl mx-auto" />
+        <HoverEffect items={projectItems} className="max-w-6xl mx-auto" />
       </div>
     </motion.div>
   );

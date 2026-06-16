@@ -63,7 +63,7 @@ const About = () => {
         </motion.h2>
 
         {/* Content Grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <motion.div 
             className="flex justify-center lg:justify-end"

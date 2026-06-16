@@ -69,7 +69,7 @@ export const HoverEffect = ({
           <Card>
             <div className="flex flex-col sm:flex-row items-start sm:items-center h-full gap-4 md:gap-6">
               {item.image && (
-                <div className="flex-shrink-0 w-full sm:w-56 md:w-64">
+                <div className="flex-shrink-0 w-full sm:w-64 md:w-80">
                   <img
                     src={item.image}
                     alt={item.title}
