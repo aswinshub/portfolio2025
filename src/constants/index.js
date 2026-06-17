@@ -48,6 +48,7 @@ export const PROJECTS = [
     description:
       "Designed and developed the insy8 Smart Menu product landing page, a conversion-focused marketing site showcasing AI-powered hospitality and digital dining solutions. Built with React and Tailwind CSS to deliver a responsive, visually polished experience with clear product storytelling, feature highlights, and engaging UI interactions.",
     technologies: ["React", "Tailwind CSS", "TypeScript", "Responsive Design", "UI/UX"],
+    labels: ["Design", "Development"],
     liveLinks: [
       { label: "View Live", url: "https://www.bizintellis.com/products/insy8-smartmenu/" },
     ],
@@ -58,6 +59,7 @@ export const PROJECTS = [
     description:
       "Designed and developed the UI/UX and frontend for Bi Survey Suite Studio, a business-focused survey and analytics platform that helps organizations collect feedback, analyze data, and gain actionable insights through interactive dashboards and real-time reporting. Built using React, Vite, TypeScript, Tailwind CSS, shadcn/ui, PrimeReact, React Query, and Axios to deliver a scalable, responsive, and user-friendly experience.",
     technologies: ["React", "Vite", "TypeScript", "Tailwind CSS", "shadcn/ui", "PrimeReact", "React Query", "Axios"],
+    labels: ["Design", "Development"],
     liveLinks: [
       { label: "View Live", url: "https://bi-survey-studio-dev.bizintellis.com/auth/login" },
     ],
@@ -68,6 +70,7 @@ export const PROJECTS = [
     description:
       "Designed and developed the Kinder Scapes Daycare Management Software Landing Page using React.js, creating a modern, responsive, and conversion-focused user experience. Additionally, led the product revamp in Vue.js, improving usability, visual consistency, and overall user experience across the daycare management platform for administrators, teachers, and parents.",
     technologies: ["React.js", "Vue.js", "Responsive Design", "UI/UX"],
+    labels: ["Design", "Development"],
     liveLinks: [
       { label: "View Live", url: "https://demoweb.kinderscapes.com/" },
     ],
@@ -78,6 +81,7 @@ export const PROJECTS = [
     description:
       "Designed and developed the insy8.ai marketing website, a high-performance, SEO-friendly platform built with Astro 6, Tailwind CSS v4, and TypeScript. The website features a scalable content architecture, dark/light theme support, interactive animations, and conversion-focused user journeys to showcase AI-powered business analytics solutions.",
     technologies: ["Astro 6", "Tailwind CSS v4", "TypeScript", "SEO"],
+    labels: ["Design", "Development"],
     liveLinks: [
       { label: "View Live", url: "https://insy8.ai/" },
       { label: "Landing Page", url: "https://www.bizintellis.com/insy8-ai/" },
@@ -90,6 +94,7 @@ export const PROJECTS = [
     description:
       "Designed and developed Tea Time Premium Smart Menu, a modern QR-based digital dining platform built with Astro 5, React 19, TypeScript, and Tailwind CSS v4. The solution features AI-assisted menu discovery, multilingual support, smart search, cart management, and a Front Desk dashboard, delivering a fast, interactive, and mobile-first customer experience.",
     technologies: ["Astro 5", "React 19", "TypeScript", "Tailwind CSS v4"],
+    labels: ["Design", "Development"],
     liveLinks: [
       { label: "View Live", url: "https://teatimepremium-demo.bizintellis.ae/" },
       { label: "Front Desk", url: "https://teatimepremium-front-desk.vercel.app/" },
@@ -98,11 +103,12 @@ export const PROJECTS = [
   
 
   {
-    title: "People Metrics – Workforce Analytics Platform",
+    title: "People Metrics – Customer Experience Management Platform",
     image: peopleMetrics,
     description:
-      "Led the UI/UX redesign and product revamp of People Metrics, a workforce analytics platform that helps organizations track employee performance, engagement, and business KPIs. Redesigned dashboards, reporting interfaces, and analytics workflows to deliver a modern, data-driven, and user-friendly experience.",
+      "Led the UI/UX redesign and product revamp of People Metrics,ustomer Experience Management (CEM) software platform and consulting firm that helps organizations measure, monitor, and improve the customer journey. and business KPIs. Redesigned dashboards, reporting interfaces, and analytics workflows to deliver a modern, data-driven, and user-friendly experience.",
     technologies: ["UI/UX Design", "Dashboard Design", "Analytics", "Figma"],
+    labels: ["Design"],
     liveLinks: [
       { label: "View Live", url: "https://cem.peoplemetrics.com/login" },
     ],
@@ -113,6 +119,7 @@ export const PROJECTS = [
     description:
       "Led the UI/UX redesign and modernization of IF3, an ingredient factory business intelligence platform. Revamped analytics dashboards, reporting modules, and operational workflows to improve usability, data visibility, and overall user experience, helping stakeholders make faster and more informed business decisions.",
     technologies: ["UI/UX Design", "Business Intelligence", "Dashboard Design", "Analytics"],
+    labels: ["Design"],
     liveLinks: [
       { label: "View Live", url: "https://if-revamp-01.bizintellis.com/login" },
     ],
