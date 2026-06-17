@@ -1,13 +1,14 @@
 import React from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "motion/react";
-import { HoverEffect, Card, CardTitle, CardDescription } from "./HoverEffect";
+import { HoverEffect } from "./HoverEffect";
 
 const Projects = () => {
   // Transform PROJECTS data to match HoverEffect format
   const projectItems = PROJECTS.map((project) => ({
     title: project.title,
     description: project.description,
+    labels: project.labels,
     liveLinks: project.liveLinks,
     technologies: project.technologies,
     image: project.image,
@@ -30,10 +31,10 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          Projects
+          Major Projects
         </motion.h2>
         
-        <HoverEffect items={projectItems} className="max-w-6xl mx-auto" />
+        <HoverEffect items={projectItems} className="max-w-[1400px] mx-auto" />
       </div>
     </motion.div>
   );
