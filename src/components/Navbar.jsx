@@ -1,9 +1,6 @@
 import React from "react";
-import logo from "../assets/aswinlogo.png";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaDribbble } from "react-icons/fa";
+import logo from "../assets/logo as.png";
+import { FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa";
 import { motion } from "motion/react";
 
 const Navbar = () => {
@@ -52,8 +49,7 @@ const Navbar = () => {
             {[
               { icon: FaLinkedin, color: "#0077b5", delay: 0, label: "LinkedIn", href: "https://www.linkedin.com/in/aswin-chandran-8b852a1a9/" },
               { icon: FaGithub, color: "#e6edf3", delay: 1, label: "GitHub", href: "https://github.com/aswinshub" },
-              { icon: FaInstagram, color: "#e4405f", delay: 2, label: "Instagram", href: "https://www.instagram.com/aswinnchandran/" },
-              { icon: FaDribbble, color: "#ea4c89", delay: 3, label: "Dribbble", href: "https://dribbble.com/AswinChandran" }
+              { icon: FaDribbble, color: "#ea4c89", delay: 2, label: "Dribbble", href: "https://dribbble.com/AswinChandran" }
             ].map(({ icon: Icon, color, delay, label, href }, index) => (
               <motion.a
                 key={index}

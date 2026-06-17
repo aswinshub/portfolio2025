@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { FaLinkedin, FaGithub, FaInstagram, FaDribbble } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa";
 import { CONTACT } from "../constants";
 
 const Footer = () => {
@@ -9,14 +9,12 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaLinkedin, href: "https://www.linkedin.com/in/aswin-chandran-8b852a1a9/", label: "LinkedIn", color: "#0077b5" },
     { icon: FaGithub, href: "https://github.com/aswinshub", label: "GitHub", color: "#e6edf3" },
-    { icon: FaInstagram, href: "https://www.instagram.com/aswinnchandran/", label: "Instagram", color: "#e4405f" },
     { icon: FaDribbble, href: "https://dribbble.com/AswinChandran", label: "Dribbble", color: "#ea4c89" },
   ];
 
   const contactItems = [
     { label: "Email", value: CONTACT.Email, type: "email" },
     { label: "Phone", value: CONTACT.phoneNo, type: "phone" },
-    { label: "Location", value: CONTACT.Address, type: "location" },
   ];
 
   const containerVariants = {
@@ -69,7 +67,7 @@ const Footer = () => {
 
             {/* Contact Info */}
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto"
               variants={containerVariants}
             >
               {contactItems.map((item, index) => (
