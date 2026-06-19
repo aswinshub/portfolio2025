@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center border-b border-neutral-800/50 py-16">
+    <div id="home" className="min-h-screen flex items-center justify-center border-b border-neutral-800/50 py-16">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center space-y-8">

@@ -152,7 +152,8 @@ const Tech = () => {
 
   return (
     <motion.div
-      className="py-24 border-b border-neutral-800/50"
+      id="technical-skills"
+      className="py-24 border-b border-neutral-800/50 scroll-mt-28"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -166,7 +167,7 @@ const Tech = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          Technologies
+         Technical Skills
         </motion.h2>
 
         <motion.div
