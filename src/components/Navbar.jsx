@@ -31,13 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-      style={{ willChange: "transform, opacity" }}
-    >
+    <nav className="sticky top-0 z-50 w-full backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between gap-4 py-4">
           <motion.a
@@ -109,7 +103,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
