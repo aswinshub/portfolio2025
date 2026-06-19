@@ -145,7 +145,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "IF3 – Ingredient Factory Intelligence Platform",
+    title: "TAKASAGO - IF3 – Ingredient Factory Intelligence Platform",
     image: if3,
     description:
       "Led the UI/UX redesign and modernization of IF3, an ingredient factory business intelligence platform. Revamped analytics dashboards, reporting modules, and operational workflows to improve usability, data visibility, and overall user experience, helping stakeholders make faster and more informed business decisions.",

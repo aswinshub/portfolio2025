@@ -66,7 +66,7 @@ const Experience = () => {
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      <div className="container mx-auto px-6">
+      <div className="w-full">
         {/* Section Title */}
         <motion.h2 
           className="mb-16 text-center text-3xl md:text-4xl font-light tracking-tight text-neutral-100"
@@ -79,14 +79,14 @@ const Experience = () => {
         </motion.h2>
         
         {/* Experience Timeline */}
-        <motion.div className="max-w-6xl mx-auto space-y-12" variants={containerVariants}>
+        <motion.div className="mx-auto w-full max-w-6xl space-y-12" variants={containerVariants}>
           {EXPERIENCES.map((experience, index) => (
             <motion.div
               key={index}
-              className="grid grid-cols-1 md:grid-cols-4 gap-6 group"
+              className="grid grid-cols-1 md:grid-cols-[120px_minmax(0,1fr)] gap-x-10 gap-y-2 group"
               variants={experienceVariants}
             >
-              {/* Year - Left Column */}
+              {/* Year */}
               <motion.div 
                 className="md:text-right"
                 initial={{ opacity: 0, x: -20 }}
@@ -94,14 +94,14 @@ const Experience = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1, duration: 0.5 }}
               >
-                <p className="text-sm text-neutral-500 font-light">
+                <p className="text-sm text-neutral-500 font-light md:pt-1">
                   {experience.year}
                 </p>
               </motion.div>
               
-              {/* Content - Right Column */}
+              {/* Content */}
               <motion.div 
-                className="md:col-span-3"
+                className="min-w-0"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
