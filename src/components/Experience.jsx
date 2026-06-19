@@ -2,6 +2,21 @@ import React from "react";
 import { EXPERIENCES } from "../constants";
 import { motion } from "motion/react";
 
+const AI_TOOLS = new Set(["Figma Make", "Stitch", "Lovable", "Claude Design"]);
+
+const AiSparkleIcon = ({ className }) => (
+  <svg
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    aria-hidden="true"
+    className={className}
+  >
+    <path d="M8 1.2 8.95 4.85 12.6 5.8 8.95 6.75 8 10.4 7.05 6.75 3.4 5.8 7.05 4.85 8 1.2Z" />
+    <path d="M2.8 2.2 3.25 3.55 4.6 4 3.25 4.45 2.8 5.8 2.35 4.45 1 4 2.35 3.55 2.8 2.2Z" />
+    <path d="M12.8 9.8 13.2 10.95 14.35 11.35 13.2 11.75 12.8 12.9 12.4 11.75 11.25 11.35 12.4 10.95 12.8 9.8Z" />
+  </svg>
+);
+
 const Experience = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -114,14 +129,22 @@ const Experience = () => {
                 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
-                  {experience.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 text-xs text-neutral-400 bg-neutral-900/50 border border-neutral-800 rounded-full font-light hover:border-neutral-700 hover:text-neutral-300 transition-colors"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {experience.technologies.map((tech, techIndex) => {
+                    const label = tech.trim();
+                    const showAiIcon = AI_TOOLS.has(label);
+
+                    return (
+                      <span
+                        key={techIndex}
+                        className="inline-flex items-center gap-1.5 px-3 py-1 text-xs text-neutral-400 bg-neutral-900/50 border border-neutral-800 rounded-full font-light hover:border-neutral-700 hover:text-neutral-300 transition-colors"
+                      >
+                        {showAiIcon && (
+                          <AiSparkleIcon className="h-3.5 w-3.5 shrink-0" />
+                        )}
+                        {label}
+                      </span>
+                    );
+                  })}
                 </div>
               </motion.div>
             </motion.div>
