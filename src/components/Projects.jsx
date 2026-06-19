@@ -16,7 +16,8 @@ const Projects = () => {
 
   return (
     <motion.div 
-      className="py-24 border-b border-neutral-800/50"
+      id="projects"
+      className="py-24 border-b border-neutral-800/50 scroll-mt-28"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}

@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import SplashCursor from "../src/blocks/TailwindAnimations/SplashCursor/SplashCursor";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import { motion } from "motion/react";
 
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
        
         <Footer />
       </motion.div>
+      <ScrollToTop />
     </motion.div>
   );
 };

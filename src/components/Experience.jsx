@@ -59,7 +59,8 @@ const Experience = () => {
 
   return (
     <motion.div 
-      className="py-24 border-b border-neutral-800/50"
+      id="experience"
+      className="py-24 border-b border-neutral-800/50 scroll-mt-28"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

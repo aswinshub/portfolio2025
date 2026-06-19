@@ -44,7 +44,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-24 border-t border-neutral-800/50">
+    <footer id="contact" className="py-24 border-t border-neutral-800/50 scroll-mt-28">
       <div className="container mx-auto px-6">
         <motion.div 
           className="flex flex-col items-center space-y-16"
