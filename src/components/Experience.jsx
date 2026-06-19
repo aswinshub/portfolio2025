@@ -100,9 +100,17 @@ const Experience = () => {
                 </p>
                 
                 {/* Description */}
-                <p className="text-base text-neutral-400 leading-relaxed mb-4 font-light">
-                  {experience.description}
-                </p>
+                {experience.points ? (
+                  <ul className="text-base text-neutral-400 leading-relaxed mb-4 font-light space-y-2 list-disc pl-5">
+                    {experience.points.map((point, pointIndex) => (
+                      <li key={pointIndex}>{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-base text-neutral-400 leading-relaxed mb-4 font-light">
+                    {experience.description}
+                  </p>
+                )}
                 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
