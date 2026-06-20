@@ -128,7 +128,7 @@ export const PROJECTS = [
     labels: ["Design", "Development"],
     liveLinks: [
       { label: "View Live", url: "https://teatimepremium-demo.bizintellis.ae/" },
-      { label: "Front Desk", url: "https://teatimepremium-front-desk.vercel.app/" },
+      { label: "Front Desk", url: "https://teatimepremium-demo.bizintellis.ae/front-desk" },
     ],
   },
   

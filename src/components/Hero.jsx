@@ -20,7 +20,7 @@ const Hero = () => {
               className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-neutral-50"
               style={{ willChange: 'transform, opacity' }}
             >
-              Aswin Chandran
+              Aswin P
             </motion.h1>
             
             {/* Subtitle */}
